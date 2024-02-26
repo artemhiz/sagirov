@@ -1,0 +1,94 @@
+header {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 0.5px solid #989393;
+    width: 100vw;
+}
+header .packer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .wrapper {
+    border: 0.5px solid rgba(152, 147, 147, 0.5);
+}
+header #main-logo {
+    border: none;
+    margin-bottom: -1px;
+    background-color: transparent;
+    --s: 6px;
+    --t: 2px;
+    --g: 15px;
+    
+    padding-top: 26px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    outline: var(--t) solid rgba(255, 255, 255, 0.5);
+    outline-offset: calc(-1*var(--t));
+    mask:
+        conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+        0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+        linear-gradient(#000 0 0) content-box;
+}
+nav {
+    margin: 0 20px 0 20px;
+    display: flex;
+    gap: 20px;
+}
+header .mobile img {
+    height: 50px;
+}
+nav button, header .mobile {
+    font-family: 'MuseoSansCyrl300';
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: white;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: .15625s;
+}
+nav button:hover {
+    color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+.mobile {
+    display: none;
+}
+
+@media all and (max-width: 900px) {
+    .mobile {
+        display: block;
+    }
+    header {
+        width: 100vw;
+    }
+    header #main-logo {
+        height: 100%;
+    }
+    .not-for-mobile {
+        display: none;
+    }
+    nav {
+        overflow-x: auto;
+        margin: 0;
+        padding: 5px 15px;
+        flex-direction: column;
+        position: absolute;
+        right: 5px;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+    }
+    nav button {
+        font-size: 20px;
+    }
+    header #main-logo {
+        padding: 10px 5px 15px 10px;
+    }
+    header #main-logo img {
+        height: 30px;
+    }
+}

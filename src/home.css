@@ -1,0 +1,111 @@
+#home table.main {
+    flex: 1;
+}
+#home table.main tr {
+    display: flex;
+    justify-content: space-between;
+}
+#home table.main td:not(#benefits td) {
+    display: flex;
+    flex-direction: column;
+}
+#home #eye-catcher {
+    align-items: flex-start;
+}
+#home .slogan {
+    margin-top: 7vh;
+    width: 450px;
+    background-image: linear-gradient(90deg, white, #ff3f04);
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#home .slogan h2 {
+    font-family: "MuseoSansCyrl700";
+    text-transform: uppercase;
+    font-size: 58px;
+    margin: 0;
+}
+#home .slogan h6 {
+    font-size: 25px;
+    margin: 0;
+}
+
+#home #journey {
+    margin-top: 60px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transform: translate(-9px, 0);
+}
+#home #journey img {
+    height: 60px;
+    margin: 0;
+}
+
+#home #benefits {
+    color: white;
+    text-align: center;
+}
+#home #benefits tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#home #benefits tr {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+#home #benefits td {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    width: 200px;
+    height: 200px;
+    transition: .3125s
+}
+#home #benefits td:hover {
+    opacity: 1;
+}
+#home #benefits h3 {
+    font-size: 60px;
+    font-family: "MuseoSansCyrl700";
+    margin: 0;
+    margin-top: 10px;
+}
+#home #benefits p {
+    margin: 0;
+}
+
+@media all and (max-width: 900px) {
+    #home {
+        margin-bottom: 40vh;
+        flex-direction: column;
+    }
+    #home table.main tr:not(#benefits tr) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    #eye-catcher {
+        height: 70vh;
+        justify-content: center;
+    }
+    #home .slogan {
+        text-align: center;
+        margin: 0;
+    }
+    #home #journey {
+        margin: 60px auto 0 auto;
+        transform: none;
+    }
+}
